@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Cherolina';
+  src: url('Cherolina.eot');
+  src: url('Cherolina.eot?#iefix') format('embedded-opentype'),
+       url('Cherolina.svg#Cherolina') format('svg'),
+       url('Cherolina.ttf') format('truetype'),
+       url('Cherolina.woff') format('woff'),
+       url('Cherolina.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

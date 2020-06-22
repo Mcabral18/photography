@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --title-font: Courgette;
+    --title-sub: Tangerine;
+    --title-sub2: Parisienne;
+    --title-sub3: Messiri;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    background: #eee;
+    height: auto;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: var(--title-font);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 1rem;
+    font-family: var(--title-sub);
+}
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+.banner-area {
+    background: #fff;
+}
+
+.banner-text {
+    display: flex;
+    flex: 0 1 40vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.banner-text h2 {
+    color: #888;
+}
+
+.banner-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    transition: background 500ms ease;
+}
+
+.btn:hover {
+    background: #f4f4f4;
+    color: black;
+    border-color: whitesmoke;
+}
+
+
+/* Screen Sizes 500px and Up */
+
+@media (min-width: 500px) {
+    .banner-area {
+        display: flex;
+        height: 100%;
+    }
+    .banner-text {
+        height: 100vh;
+    }
+    .banner-image {
+        height: 100vh;
+    }
+}
+
+
+/* Screen Sizes 700px and Up */
+
+@media (min-width: 700px) {
+    .btn {
+        padding: 1rem 3rem;
+    }
+}
+
+.nav-scroll {
+    position: fixed !important;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav a {
+    color: black;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem !important;
+}
+
+.navbar-brand {
+    color: black;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    padding: 0.5rem 0 0.5rem 4rem !important;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.2) translateY(-3px);
+    letter-spacing: 6px;
+}
+
+
+/* content */
+
+
+/* section1*/
+
+.section1 {
+    margin: 2rem;
+}
+
+.title2 {
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: var(--title-sub);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.discription {
+    padding: 30px 5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: var(--title-sub);
+    color: #888;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.author {
+    font-family: var(--title-sub2);
+    font-style: italic;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.author::before {
+    content: "";
+    position: absolute;
+    background: black;
+    height: 1px;
+    width: 30%;
+    right: 70%;
+    bottom: 6%;
+    z-index: -1;
+    transition: transform 175ms cubic-bezier(0.91, 0, 0.55, 1.64);
+    transform-origin: bottom left;
+}
+
+.author::after {
+    content: "";
+    position: absolute;
+    background: black;
+    height: 1px;
+    width: 30%;
+    left: 70%;
+    bottom: 6%;
+    z-index: -1;
+    transition: transform 175ms cubic-bezier(0.91, 0, 0.55, 1.64);
+    transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 690px) {
+    .title2 {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .discription {
+        text-align: center;
+        letter-spacing: 2px;
+        color: #888;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        padding: 30px 1rem;
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .discription {
+        text-align: center;
+        letter-spacing: 1.5px;
+        color: #888;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        padding: 20px 10px;
+    }
+}
+
+.current {
+    color: red!important;
+}
+
+
+/* section2 services */
+
+.section2 .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.card {
+    display: flex;
+    margin: 30px auto;
+    width: 22rem;
+    background: #f9fafb;
+    box-shadow: 9px 9px 22px #d1d2d3, -9px -9px 22px #ffffff;
+}
+
+.card h4 {
+    font-family: Messiri;
+    font-style: italic;
+    font-weight: 50;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.card-img-top {
+    display: block;
+    width: 20em;
+    max-width: 100%;
+    margin: 1em auto;
+    border-radius: 5px;
+}
+
+.card-body .card-text {
+    margin: 0.5em 5%;
+    color: #646464;
+    font-style: italic;
+    text-align: center;
+    font-family: var(--title-sub3);
+    font-size: 1em;
+}
+
+.card .btn {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #eee;
+}
+
+.card .btn-book {
+    padding: 0.5em 0.2em;
+    background: #ddba76;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-family: var(--title-sub3);
+    font-weight: bold;
+}
+
+.card .btn:hover {
+    background: transparent;
+    color: #ddba76;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.10);
+}
+
+.card {
+    animation: zoomIn;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s;
+    animation-delay: 0.8s;
+    /* don't forget to set a duration! */
+}
+
+
+/* contacts */
+
+.section3 {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.inner-width {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section3 h1 {
+    font-size: 20px;
+    color: #888;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.name,
+.email,
+.message {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    color: #888;
+    padding: 10px 6px;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.name {
+    float: left;
+    width: 270px;
+}
+
+.email {
+    float: left;
+    width: 270px;
+}
+
+.message {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.inner-width button {
+    background: none;
+    color: #70a1ff;
+    border: 1px solid #70a1ff;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.4s linear;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.inner-width button:hover {
+    background: #70a1ff;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .name,
+    .email {
+        width: 100%;
+    }
+}
+
+
+/* gallery */
+
+.main-img img,
+.imgs img {
+    width: 100%;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.imgs img {
+    cursor: pointer;
+}
+
+
+/* Fade in animation */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn var(--fade-time) ease-in 1 forwards;
+}
+
+
+/* Media Queries */
+
+@media(max-width: 600px) {
+    .imgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.socialmedia a {
+    color: #fff;
+    background: rgb(179, 176, 176);
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: fontawesome;
+    width: 40px;
+    margin: 0 5px;
+    padding: 12px;
+    justify-content: center;
+    display: flex;
+}
+
+.socialmedia a:hover {
+    background: #70a1ff;
+}
